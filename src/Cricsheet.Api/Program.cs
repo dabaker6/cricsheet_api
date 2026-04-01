@@ -1,7 +1,11 @@
 using Cricsheet.Api.Contracts;
 using Cricsheet.Api.Configuration;
+using Cricsheet.Api.Validation;
+using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddValidatorsFromAssemblyContaining<BrowseFilterRequestValidator>();
 
 builder.Services
 	.AddOptions<CosmosSettings>()
