@@ -5,7 +5,14 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <IsPackable>false</IsPackable>
+    <!-- Test method naming convention uses underscores (Given_When_Then); suppress CA1707 for test projects -->
+    <!-- CA2234: Integration tests routinely use string URIs with HttpClient -->
+    <NoWarn>$(NoWarn);CA1707;CA2234</NoWarn>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Cricsheet.Api\Cricsheet.Api.csproj" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.4" />

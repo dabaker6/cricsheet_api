@@ -1,6 +1,8 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Cricsheet.Api.UnitTests")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Cricsheet.Api.IntegrationTests")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Cricsheet.Api.ContractTests")]
 [assembly: System.Runtime.CompilerServices.InternalsVisibleTo("DynamicProxyGenAssembly2")]
 
 [assembly: SuppressMessage(

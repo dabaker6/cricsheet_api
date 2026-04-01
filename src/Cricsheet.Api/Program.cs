@@ -43,3 +43,9 @@ app.Use(async (context, next) =>
 app.MapGet("/", () => "Hello World!");
 
 app.Run();
+
+// Expose Program for WebApplicationFactory in integration/contract tests
+// CA1515 suppressed: public partial class is required for WebApplicationFactory access in test assemblies.
+#pragma warning disable CA1515
+public partial class Program { }
+#pragma warning restore CA1515

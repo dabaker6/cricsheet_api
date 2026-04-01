@@ -21,7 +21,7 @@
 ## Phase 3: User Story 1 (P1) - Browse/Filter Matches
 
 - [x] T010 [US1] Write unit tests for browse filter validation and max-10 capping in `tests/Cricsheet.Api.UnitTests/BrowseFilterTests.cs`.
-- [ ] T011 [US1] Write integration tests for browse endpoint with filter combinations in `tests/Cricsheet.Api.IntegrationTests/BrowseEndpointTests.cs`.
+- [x] T011 [US1] Write integration tests for browse endpoint with filter combinations in `tests/Cricsheet.Api.IntegrationTests/BrowseEndpointTests.cs`.
 - [ ] T012 [US1] Write contract tests for browse response schema in `tests/Cricsheet.Api.ContractTests/BrowseContractTests.cs`.
 - [ ] T013 [US1] Implement browse query service with `info`-field filters in `src/Cricsheet.Api/Application/Services/BrowseService.cs`.
 - [ ] T014 [US1] Implement summary projection mapping (teams, venue, competition, date) in `src/Cricsheet.Api/Application/Services/SummaryMapper.cs`.

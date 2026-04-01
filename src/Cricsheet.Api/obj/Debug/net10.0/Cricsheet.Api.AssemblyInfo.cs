@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cricsheet.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1762075179b05ed640507ae77f20ef277309da4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48666fb9dacd19af28c3f9bd0fe2422975e498de")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cricsheet.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cricsheet.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
