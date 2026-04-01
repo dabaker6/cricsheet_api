@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cricsheet.Api.ContractTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9a91fe854ea62fc94c7bc26f579747caf8066ae5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45c229b966d5051b5c318b71c6beb7d68f8f79b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cricsheet.Api.ContractTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cricsheet.Api.ContractTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
