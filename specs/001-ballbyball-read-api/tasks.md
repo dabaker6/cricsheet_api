@@ -13,7 +13,7 @@
 ## Phase 2: Foundational
 
 - [x] T005 Define domain contracts and provider interfaces in `src/Cricsheet.Api/Application/Interfaces/`.
-- [ ] T006 Implement shared API error envelope and correlation middleware in `src/Cricsheet.Api/Contracts/` and `src/Cricsheet.Api/Program.cs`.
+- [x] T006 Implement shared API error envelope and correlation middleware in `src/Cricsheet.Api/Contracts/` and `src/Cricsheet.Api/Program.cs`.
 - [ ] T007 Implement validation models for browse filter and match id in `src/Cricsheet.Api/Validation/`.
 - [ ] T008 Implement Cosmos managed-identity client factory in `src/Cricsheet.Api/Infrastructure/Cosmos/`.
 - [ ] T009 Implement database provider abstraction wiring in `src/Cricsheet.Api/Infrastructure/Providers/`.
