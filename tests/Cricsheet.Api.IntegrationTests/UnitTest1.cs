@@ -1,4 +1,4 @@
-﻿namespace Cricsheet.Api.IntegrationTests;
+namespace Cricsheet.Api.IntegrationTests;
 
 public class UnitTest1
 {
