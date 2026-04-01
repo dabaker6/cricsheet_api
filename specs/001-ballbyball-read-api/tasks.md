@@ -29,7 +29,7 @@
 
 ## Phase 4: User Story 2 (P2) - Retrieve Full Match Detail
 
-- [ ] T016 [US2] Write unit tests for detail retrieval and not-found handling in `tests/Cricsheet.Api.UnitTests/DetailServiceTests.cs`.
+- [x] T016 [US2] Write unit tests for detail retrieval and not-found handling in `tests/Cricsheet.Api.UnitTests/DetailServiceTests.cs`.
 - [ ] T017 [US2] Write integration tests for detail endpoint in `tests/Cricsheet.Api.IntegrationTests/DetailEndpointTests.cs`.
 - [ ] T018 [US2] Write contract tests for detail response schema in `tests/Cricsheet.Api.ContractTests/DetailContractTests.cs`.
 - [ ] T019 [US2] Implement detail retrieval service in `src/Cricsheet.Api/Application/Services/DetailService.cs`.
