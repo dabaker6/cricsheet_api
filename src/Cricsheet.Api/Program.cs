@@ -47,6 +47,7 @@ app.Use(async (context, next) =>
 
 app.MapGet("/", () => "Hello World!");
 app.MapBrowseEndpoints();
+app.MapDetailEndpoints();
 
 app.Run();
 
