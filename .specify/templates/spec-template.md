@@ -90,6 +90,24 @@
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
 
+### API & Web Consumption Requirements *(mandatory for APIs)*
+
+- **API-001**: Responses MUST use documented JSON schemas suitable for frontend parsing.
+- **API-002**: Errors MUST provide machine-readable codes and user-appropriate messages.
+- **API-003**: Breaking contract changes MUST be versioned and explicitly documented.
+- **API-004**: Request/response validation rules MUST be defined for all external endpoints.
+
+### Security Requirements *(mandatory)*
+
+- **SEC-001**: Authentication and authorization requirements MUST be specified per endpoint.
+- **SEC-002**: Sensitive data handling and secret management constraints MUST be specified.
+- **SEC-003**: Audit and security event logging requirements MUST be defined.
+
+### Testing Requirements *(mandatory)*
+
+- **TEST-001**: Tests MUST be specified before implementation tasks (TDD requirement).
+- **TEST-002**: Unit, integration, and contract coverage expectations MUST be stated.
+
 *Example of marking unclear requirements:*
 
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]

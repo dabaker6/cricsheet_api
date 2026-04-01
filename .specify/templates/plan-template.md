@@ -31,7 +31,12 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] Coding standards gates defined (lint, format, static analysis) and enforced in CI.
+- [ ] Architecture plan demonstrates SOLID boundaries and explicit extension points.
+- [ ] TDD approach documented (test-first sequence for unit, integration, and contract).
+- [ ] Cloud-native runtime requirements captured (statelessness, config, health, observability).
+- [ ] Security controls documented (validation, auth/authz, secrets, dependency scanning).
+- [ ] API response and error contracts specified for frontend consumption.
 
 ## Project Structure
 

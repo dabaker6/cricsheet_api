@@ -1,0 +1,106 @@
+{
+    "info": {
+        "balls_per_over": 6,
+        "venue": "Daren Sammy National Cricket Stadium, Gros Islet",
+        "dates": [
+            "2016-07-26"
+        ],
+        "event": {
+            "name": "Caribbean Premier League",
+            "match_number": 24
+        },
+        "gender": "male",
+        "teams": [
+            "St Lucia Zouks",
+            "Trinbago Knight Riders"
+        ],
+        "outcome": {
+            "winner": "Trinbago Knight Riders",
+            "by": {
+                "wickets": 3
+            }
+        },
+        "toss": {
+            "decision": "field",
+            "winner": "Trinbago Knight Riders"
+        },
+        "player_of_match": [
+            "Umar Akmal"
+        ],
+        "match_type": "T20",
+        "overs": 20,
+        "team_type": "club",
+        "registry": {
+            "people": {
+                "ADS Fletcher": "1bae756b-ce38-4b99-af93-d34c8dadc379",
+                "AP Devcich": "ed90abe4-c676-4501-b7df-ad80935e8e1b",
+                "BB McCullum": "b8a55852-72a5-4667-999d-28f845354af9",
+                "C Munro": "af2c687b-04d1-4fd0-bcc0-61e7fdbe4ef4",
+                "D Ramdin": "d1523761-c316-4e18-92f7-6e048af72422",
+                "DE Johnson": "c0babb93-b6a0-43e8-bfe5-00c1a38c3fd3",
+                "DJ Bravo": "87e562a9-a160-4e25-bbac-5d70c61b754f",
+                "DJG Sammy": "c03c6200-a23c-43ab-8b77-76b71fae379b",
+                "Denavon Hayles": "5cbeeb02-fa35-4ee0-8dc8-84873c42044d",
+                "GD Elliott": "c03449e0-5c0d-480b-901f-c744a56737e5",
+                "J Charles": "09a9d073-9f18-486a-8d67-1ba665a1bae4",
+                "JD Cloete": "b0419f8c-68dc-4d18-8727-f51227a9a3be",
+                "JE Taylor": "4180d897-7347-482a-a1d2-ac51bf262eae",
+                "K Lesporis": "fb496f7a-d8f3-4c59-8ec8-829647161bb9",
+                "KK Cooper": "557153ca-f977-4398-a2f0-f47c10b44929",
+                "KR Mayers": "73c18486-c4e8-4708-830d-0d7b700361d5",
+                "MEK Hussey": "48fd7349-6426-4791-806b-0644a8d8ae5c",
+                "NO Miller": "ea3ffd1b-23f2-4490-8796-074cfb5b90ce",
+                "PA Gustard": "25bcf808-a2d9-4d8b-8bca-37977305221c",
+                "RR Beaton": "684a56df-eaf3-4191-8887-7f4c7cfe55e2",
+                "S Shillingford": "d76b0d2d-f791-423b-950f-4a6d022b1db8",
+                "SP Narine": "9d430b40-abd3-472f-9dc6-45129c0f41ea",
+                "SR Watson": "4329fbb5-8f2d-4fe8-bddb-6f34c9815a4a",
+                "Umar Akmal": "fd2bf2a0-1a89-430c-9a7d-f34eaf7b120d",
+                "WKD Perkins": "1920c721-f06c-45e9-b8a7-f938774f9fc8",
+                "Zahid Bassarath": "ca6bf044-4d96-4a41-94af-9d6f6c6fc46a"
+            }
+        },
+        "city": "St Lucia",
+        "officials": {
+            "match_referees": [
+                "Denavon Hayles"
+            ],
+            "tv_umpires": [
+                "Zahid Bassarath"
+            ],
+            "umpires": [
+                "JD Cloete",
+                "PA Gustard"
+            ]
+        },
+        "players": {
+            "St Lucia Zouks": [
+                "J Charles",
+                "ADS Fletcher",
+                "SR Watson",
+                "MEK Hussey",
+                "GD Elliott",
+                "DJG Sammy",
+                "KR Mayers",
+                "DE Johnson",
+                "S Shillingford",
+                "K Lesporis",
+                "JE Taylor"
+            ],
+            "Trinbago Knight Riders": [
+                "WKD Perkins",
+                "BB McCullum",
+                "C Munro",
+                "D Ramdin",
+                "Umar Akmal",
+                "DJ Bravo",
+                "AP Devcich",
+                "SP Narine",
+                "KK Cooper",
+                "NO Miller",
+                "RR Beaton"
+            ]
+        },
+        "season": "2016"
+    }
+}
