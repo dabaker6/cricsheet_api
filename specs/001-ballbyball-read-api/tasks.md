@@ -32,7 +32,7 @@
 - [x] T016 [US2] Write unit tests for detail retrieval and not-found handling in `tests/Cricsheet.Api.UnitTests/DetailServiceTests.cs`.
 - [x] T017 [US2] Write integration tests for detail endpoint in `tests/Cricsheet.Api.IntegrationTests/DetailEndpointTests.cs`.
 - [x] T018 [US2] Write contract tests for detail response schema in `tests/Cricsheet.Api.ContractTests/DetailContractTests.cs`.
-- [ ] T019 [US2] Implement detail retrieval service in `src/Cricsheet.Api/Application/Services/DetailService.cs`.
+- [x] T019 [US2] Implement detail retrieval service in `src/Cricsheet.Api/Application/Services/DetailService.cs`.
 - [ ] T020 [US2] Add detail endpoint in `src/Cricsheet.Api/Endpoints/DetailEndpoints.cs`.
 
 ## Phase 5: User Story 3 (P3) - Frontend-Usable Errors
