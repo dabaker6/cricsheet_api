@@ -1,5 +1,8 @@
 using System.Diagnostics.CodeAnalysis;
 
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("Cricsheet.Api.UnitTests")]
+[assembly: System.Runtime.CompilerServices.InternalsVisibleTo("DynamicProxyGenAssembly2")]
+
 [assembly: SuppressMessage(
     "Performance",
     "CA1812:Avoid uninstantiated internal classes",
