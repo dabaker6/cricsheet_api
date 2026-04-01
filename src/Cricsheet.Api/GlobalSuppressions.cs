@@ -48,3 +48,9 @@ using System.Diagnostics.CodeAnalysis;
     Justification = "Validators are resolved through FluentValidation service scanning and consumed by endpoint handlers in subsequent tasks.",
     Scope = "type",
     Target = "~T:Cricsheet.Api.Validation.MatchIdRequestValidator")]
+[assembly: SuppressMessage(
+    "Performance",
+    "CA1812:Avoid uninstantiated internal classes",
+    Justification = "Factory is instantiated by dependency injection registration in Program.cs.",
+    Scope = "type",
+    Target = "~T:Cricsheet.Api.Infrastructure.Cosmos.ManagedIdentityCosmosClientFactory")]
