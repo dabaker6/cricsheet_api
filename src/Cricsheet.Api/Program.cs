@@ -1,6 +1,8 @@
 using Cricsheet.Api.Contracts;
+using Cricsheet.Api.Application.Interfaces;
 using Cricsheet.Api.Configuration;
 using Cricsheet.Api.Infrastructure.Cosmos;
+using Cricsheet.Api.Infrastructure.Providers;
 using Cricsheet.Api.Validation;
 using FluentValidation;
 
@@ -8,6 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddValidatorsFromAssemblyContaining<BrowseFilterRequestValidator>();
 builder.Services.AddSingleton<ICosmosClientFactory, ManagedIdentityCosmosClientFactory>();
+builder.Services.AddScoped<IMatchBrowseProvider, CosmosMatchBrowseProvider>();
+builder.Services.AddScoped<IMatchDetailProvider, CosmosMatchDetailProvider>();
 
 builder.Services
 	.AddOptions<CosmosSettings>()

@@ -54,3 +54,15 @@ using System.Diagnostics.CodeAnalysis;
     Justification = "Factory is instantiated by dependency injection registration in Program.cs.",
     Scope = "type",
     Target = "~T:Cricsheet.Api.Infrastructure.Cosmos.ManagedIdentityCosmosClientFactory")]
+[assembly: SuppressMessage(
+    "Performance",
+    "CA1812:Avoid uninstantiated internal classes",
+    Justification = "Provider is instantiated by dependency injection registration in Program.cs.",
+    Scope = "type",
+    Target = "~T:Cricsheet.Api.Infrastructure.Providers.CosmosMatchBrowseProvider")]
+[assembly: SuppressMessage(
+    "Performance",
+    "CA1812:Avoid uninstantiated internal classes",
+    Justification = "Provider is instantiated by dependency injection registration in Program.cs.",
+    Scope = "type",
+    Target = "~T:Cricsheet.Api.Infrastructure.Providers.CosmosMatchDetailProvider")]
