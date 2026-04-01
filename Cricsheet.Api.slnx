@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Cricsheet.Api/Cricsheet.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Cricsheet.Api.ContractTests/Cricsheet.Api.ContractTests.csproj" />
+    <Project Path="tests/Cricsheet.Api.IntegrationTests/Cricsheet.Api.IntegrationTests.csproj" />
+    <Project Path="tests/Cricsheet.Api.UnitTests/Cricsheet.Api.UnitTests.csproj" />
+  </Folder>
+</Solution>

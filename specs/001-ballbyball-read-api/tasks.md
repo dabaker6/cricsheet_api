@@ -5,7 +5,7 @@
 
 ## Phase 1: Setup
 
-- [ ] T001 Create .NET solution and projects (`src/Cricsheet.Api`, `tests/Cricsheet.Api.UnitTests`, `tests/Cricsheet.Api.IntegrationTests`, `tests/Cricsheet.Api.ContractTests`).
+- [x] T001 Create .NET solution and projects (`src/Cricsheet.Api`, `tests/Cricsheet.Api.UnitTests`, `tests/Cricsheet.Api.IntegrationTests`, `tests/Cricsheet.Api.ContractTests`).
 - [ ] T002 Add package references for ASP.NET Core, Azure Cosmos SDK, Azure.Identity, FluentValidation, Serilog, xUnit, FluentAssertions, Moq.
 - [ ] T003 Configure code quality gates (`dotnet format`, analyzers, nullable context) in CI workflow.
 - [ ] T004 Add baseline app settings and environment binding for Cosmos endpoint/database/container.
