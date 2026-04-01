@@ -1,5 +1,6 @@
 using Cricsheet.Api.Contracts;
 using Cricsheet.Api.Application.Interfaces;
+using Cricsheet.Api.Application.Services;
 using Cricsheet.Api.Configuration;
 using Cricsheet.Api.Infrastructure.Cosmos;
 using Cricsheet.Api.Infrastructure.Providers;
@@ -12,6 +13,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<BrowseFilterRequestValidato
 builder.Services.AddSingleton<ICosmosClientFactory, ManagedIdentityCosmosClientFactory>();
 builder.Services.AddScoped<IMatchBrowseProvider, CosmosMatchBrowseProvider>();
 builder.Services.AddScoped<IMatchDetailProvider, CosmosMatchDetailProvider>();
+builder.Services.AddScoped<IBrowseService, BrowseService>();
 
 builder.Services
 	.AddOptions<CosmosSettings>()
