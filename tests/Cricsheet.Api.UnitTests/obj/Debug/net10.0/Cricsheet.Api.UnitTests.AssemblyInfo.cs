@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cricsheet.Api.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1c88d048c1af7c6a7ea8c801881103a1547f691")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09eea9dd4b40a86f51a78c262b61d2528c5a4bc5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cricsheet.Api.UnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cricsheet.Api.UnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -25,7 +25,7 @@
 - [x] T012 [US1] Write contract tests for browse response schema in `tests/Cricsheet.Api.ContractTests/BrowseContractTests.cs`.
 - [x] T013 [US1] Implement browse query service with `info`-field filters in `src/Cricsheet.Api/Application/Services/BrowseService.cs`.
 - [x] T014 [US1] Implement summary projection mapping (teams, venue, competition, date) in `src/Cricsheet.Api/Application/Services/SummaryMapper.cs`.
-- [ ] T015 [US1] Add browse endpoint in `src/Cricsheet.Api/Endpoints/BrowseEndpoints.cs`.
+- [x] T015 [US1] Add browse endpoint in `src/Cricsheet.Api/Endpoints/BrowseEndpoints.cs`.
 
 ## Phase 4: User Story 2 (P2) - Retrieve Full Match Detail
 

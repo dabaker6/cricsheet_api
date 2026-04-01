@@ -1,4 +1,5 @@
 using Cricsheet.Api.Contracts;
+using Cricsheet.Api.Endpoints;
 using Cricsheet.Api.Application.Interfaces;
 using Cricsheet.Api.Application.Services;
 using Cricsheet.Api.Configuration;
@@ -9,7 +10,7 @@ using FluentValidation;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddValidatorsFromAssemblyContaining<BrowseFilterRequestValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<BrowseFilterRequestValidator>(includeInternalTypes: true);
 builder.Services.AddSingleton<ICosmosClientFactory, ManagedIdentityCosmosClientFactory>();
 builder.Services.AddScoped<IMatchBrowseProvider, CosmosMatchBrowseProvider>();
 builder.Services.AddScoped<IMatchDetailProvider, CosmosMatchDetailProvider>();
@@ -44,6 +45,7 @@ app.Use(async (context, next) =>
 });
 
 app.MapGet("/", () => "Hello World!");
+app.MapBrowseEndpoints();
 
 app.Run();
 
