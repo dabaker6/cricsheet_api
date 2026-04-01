@@ -412,3 +412,6 @@ D:\source\repos\cricsheet_api\tests\Cricsheet.Api.ContractTests\obj\Debug\net10.
 D:\source\repos\cricsheet_api\tests\Cricsheet.Api.ContractTests\obj\Debug\net10.0\Cricsheet.Api.ContractTests.pdb
 D:\source\repos\cricsheet_api\tests\Cricsheet.Api.ContractTests\obj\Debug\net10.0\Cricsheet.Api.ContractTests.genruntimeconfig.cache
 D:\source\repos\cricsheet_api\tests\Cricsheet.Api.ContractTests\obj\Debug\net10.0\ref\Cricsheet.Api.ContractTests.dll
+D:\source\repos\cricsheet_api\tests\Cricsheet.Api.ContractTests\bin\Debug\net10.0\Microsoft.OpenApi.dll
+D:\source\repos\cricsheet_api\tests\Cricsheet.Api.ContractTests\bin\Debug\net10.0\Microsoft.OpenApi.Readers.dll
+D:\source\repos\cricsheet_api\tests\Cricsheet.Api.ContractTests\bin\Debug\net10.0\SharpYaml.dll

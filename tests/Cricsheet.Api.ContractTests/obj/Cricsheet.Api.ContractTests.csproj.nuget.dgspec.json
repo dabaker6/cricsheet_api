@@ -62,6 +62,10 @@
               "target": "Package",
               "version": "[17.14.1, )"
             },
+            "Microsoft.OpenApi.Readers": {
+              "target": "Package",
+              "version": "[1.6.23, )"
+            },
             "Moq": {
               "target": "Package",
               "version": "[4.20.72, )"
