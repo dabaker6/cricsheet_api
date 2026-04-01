@@ -77,3 +77,9 @@ using System.Diagnostics.CodeAnalysis;
     Justification = "Service is instantiated by dependency injection registration in Program.cs.",
     Scope = "type",
     Target = "~T:Cricsheet.Api.Application.Services.BrowseService")]
+[assembly: SuppressMessage(
+    "Performance",
+    "CA1812:Avoid uninstantiated internal classes",
+    Justification = "Service is instantiated by dependency injection registration in Program.cs.",
+    Scope = "type",
+    Target = "~T:Cricsheet.Api.Application.Services.SummaryMapper")]

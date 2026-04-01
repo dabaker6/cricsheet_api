@@ -13,6 +13,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<BrowseFilterRequestValidato
 builder.Services.AddSingleton<ICosmosClientFactory, ManagedIdentityCosmosClientFactory>();
 builder.Services.AddScoped<IMatchBrowseProvider, CosmosMatchBrowseProvider>();
 builder.Services.AddScoped<IMatchDetailProvider, CosmosMatchDetailProvider>();
+builder.Services.AddScoped<ISummaryMapper, SummaryMapper>();
 builder.Services.AddScoped<IBrowseService, BrowseService>();
 
 builder.Services

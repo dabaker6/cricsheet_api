@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cricsheet.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+306496dc53d93f74cabf9383148b1ed41512338c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1c88d048c1af7c6a7ea8c801881103a1547f691")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cricsheet.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cricsheet.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -10,16 +10,19 @@ internal interface IBrowseService
 internal sealed class BrowseService : IBrowseService
 {
     private readonly IMatchBrowseProvider _matchBrowseProvider;
+    private readonly ISummaryMapper _summaryMapper;
 
-    public BrowseService(IMatchBrowseProvider matchBrowseProvider)
+    public BrowseService(IMatchBrowseProvider matchBrowseProvider, ISummaryMapper summaryMapper)
     {
         _matchBrowseProvider = matchBrowseProvider;
+        _summaryMapper = summaryMapper;
     }
 
-    public Task<BrowseResult> BrowseAsync(BrowseFilter filter, CancellationToken cancellationToken = default)
+    public async Task<BrowseResult> BrowseAsync(BrowseFilter filter, CancellationToken cancellationToken = default)
     {
         var normalizedFilter = Normalize(filter);
-        return _matchBrowseProvider.BrowseAsync(normalizedFilter, cancellationToken);
+        var providerResult = await _matchBrowseProvider.BrowseAsync(normalizedFilter, cancellationToken).ConfigureAwait(false);
+        return _summaryMapper.Map(providerResult);
     }
 
     private static BrowseFilter Normalize(BrowseFilter filter)
