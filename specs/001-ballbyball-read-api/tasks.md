@@ -48,7 +48,7 @@
 - [x] T026 Add health/readiness endpoints and logging enrichment in `src/Cricsheet.Api/Program.cs`.
 - [x] T027 Add infrastructure notes for VNet-only inbound deployment and managed identity RBAC in deployment docs.
 - [x] T028 Run full test suite and verify TDD evidence in commit history.
-- [ ] T029 Validate quickstart scenarios from `specs/001-ballbyball-read-api/quickstart.md`.
+- [x] T029 Validate quickstart scenarios from `specs/001-ballbyball-read-api/quickstart.md`.
 
 ## Dependencies
 

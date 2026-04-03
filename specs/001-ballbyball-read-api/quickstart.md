@@ -40,6 +40,7 @@ GET /api/v1/matches/browse?gender=male&fromDate=2016-01-01&toDate=2016-12-31&ven
 Expected behavior:
 - Returns 0..10 summary entries.
 - Each summary includes teams, venue, competition, date.
+- If the database provider is unavailable in local/dev execution, returns structured `DATA_PROVIDER_UNAVAILABLE` with HTTP 503.
 
 ## 6. Example detail request
 ```http
@@ -49,6 +50,7 @@ GET /api/v1/matches/{matchId}
 Expected behavior:
 - Returns full source document for selected match id.
 - Returns structured `NOT_FOUND` error when missing.
+- If the database provider is unavailable in local/dev execution, returns structured `DATA_PROVIDER_UNAVAILABLE` with HTTP 503.
 
 ## 7. Cloud-native checks
 - Verify health endpoint readiness in deployed environment.

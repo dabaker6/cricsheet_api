@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.UnitTests\\Cricsheet.Api.UnitTests.csproj": {}
+    "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.UnitTests\\Cricsheet.Api.UnitTests.csproj": {}
   },
   "projects": {
-    "d:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj": {
+    "D:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj",
+        "projectUniqueName": "D:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj",
         "projectName": "Cricsheet.Api",
-        "projectPath": "d:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj",
+        "projectPath": "D:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj",
         "packagesPath": "C:\\Users\\dabak\\.nuget\\packages\\",
-        "outputPath": "d:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\obj\\",
+        "outputPath": "D:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -48,6 +49,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Azure.Identity": {
@@ -512,14 +514,14 @@
         }
       }
     },
-    "d:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.UnitTests\\Cricsheet.Api.UnitTests.csproj": {
+    "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.UnitTests\\Cricsheet.Api.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.UnitTests\\Cricsheet.Api.UnitTests.csproj",
+        "projectUniqueName": "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.UnitTests\\Cricsheet.Api.UnitTests.csproj",
         "projectName": "Cricsheet.Api.UnitTests",
-        "projectPath": "d:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.UnitTests\\Cricsheet.Api.UnitTests.csproj",
+        "projectPath": "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.UnitTests\\Cricsheet.Api.UnitTests.csproj",
         "packagesPath": "C:\\Users\\dabak\\.nuget\\packages\\",
-        "outputPath": "d:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.UnitTests\\obj\\",
+        "outputPath": "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -538,10 +540,11 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "d:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj": {
-                "projectPath": "d:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj"
+              "D:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj": {
+                "projectPath": "D:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj"
               }
             }
           }
@@ -560,6 +563,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "FluentAssertions": {

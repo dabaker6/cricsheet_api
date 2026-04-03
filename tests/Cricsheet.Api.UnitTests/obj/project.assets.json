@@ -3051,10 +3051,11 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {
-            "d:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj": {
-              "projectPath": "d:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj"
+            "D:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj": {
+              "projectPath": "D:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj"
             }
           }
         }
@@ -3073,6 +3074,7 @@
     },
     "frameworks": {
       "net10.0": {
+        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "FluentAssertions": {
