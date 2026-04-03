@@ -78,4 +78,3 @@ D:\source\repos\cricsheet_api\src\Cricsheet.Api\obj\Debug\net10.0\refint\Cricshe
 D:\source\repos\cricsheet_api\src\Cricsheet.Api\obj\Debug\net10.0\Cricsheet.Api.pdb
 D:\source\repos\cricsheet_api\src\Cricsheet.Api\obj\Debug\net10.0\Cricsheet.Api.genruntimeconfig.cache
 D:\source\repos\cricsheet_api\src\Cricsheet.Api\obj\Debug\net10.0\ref\Cricsheet.Api.dll
-D:\source\repos\cricsheet_api\src\Cricsheet.Api\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

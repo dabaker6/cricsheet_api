@@ -37,7 +37,7 @@
 
 ## Phase 5: User Story 3 (P3) - Frontend-Usable Errors
 
-- [ ] T021 [US3] Write unit tests for validation and provider error mapping in `tests/Cricsheet.Api.UnitTests/ErrorMappingTests.cs`.
+- [x] T021 [US3] Write unit tests for validation and provider error mapping in `tests/Cricsheet.Api.UnitTests/ErrorMappingTests.cs`.
 - [ ] T022 [US3] Write integration tests for 400/404/503 error contracts in `tests/Cricsheet.Api.IntegrationTests/ErrorResponseTests.cs`.
 - [ ] T023 [US3] Write contract tests for `ApiError` schema in `tests/Cricsheet.Api.ContractTests/ErrorContractTests.cs`.
 - [ ] T024 [US3] Implement exception-to-error translation and status mapping in `src/Cricsheet.Api/Application/Services/ErrorTranslator.cs`.
