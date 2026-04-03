@@ -17,6 +17,7 @@ builder.Services.AddScoped<IMatchDetailProvider, CosmosMatchDetailProvider>();
 builder.Services.AddScoped<ISummaryMapper, SummaryMapper>();
 builder.Services.AddScoped<IBrowseService, BrowseService>();
 builder.Services.AddScoped<IDetailService, DetailService>();
+builder.Services.AddScoped<IErrorTranslator, ErrorTranslator>();
 
 builder.Services
 	.AddOptions<CosmosSettings>()
