@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.IntegrationTests\\Cricsheet.Api.IntegrationTests.csproj": {}
+    "d:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.IntegrationTests\\Cricsheet.Api.IntegrationTests.csproj": {}
   },
   "projects": {
     "d:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj": {
@@ -512,14 +512,14 @@
         }
       }
     },
-    "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.IntegrationTests\\Cricsheet.Api.IntegrationTests.csproj": {
+    "d:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.IntegrationTests\\Cricsheet.Api.IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.IntegrationTests\\Cricsheet.Api.IntegrationTests.csproj",
+        "projectUniqueName": "d:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.IntegrationTests\\Cricsheet.Api.IntegrationTests.csproj",
         "projectName": "Cricsheet.Api.IntegrationTests",
-        "projectPath": "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.IntegrationTests\\Cricsheet.Api.IntegrationTests.csproj",
+        "projectPath": "d:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.IntegrationTests\\Cricsheet.Api.IntegrationTests.csproj",
         "packagesPath": "C:\\Users\\dabak\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.IntegrationTests\\obj\\",
+        "outputPath": "d:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.IntegrationTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

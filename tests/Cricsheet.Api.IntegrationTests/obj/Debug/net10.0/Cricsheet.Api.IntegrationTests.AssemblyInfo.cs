@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Cricsheet.Api.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c552b63103d26c29ea5896f0e86dd332575284b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec3a071fe65d78e65690bea4c2f1f058d4a6a6fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("Cricsheet.Api.IntegrationTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Cricsheet.Api.IntegrationTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
