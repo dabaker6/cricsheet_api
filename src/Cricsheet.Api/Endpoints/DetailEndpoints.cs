@@ -1,3 +1,4 @@
+using Cricsheet.Api.Application.Interfaces;
 using Cricsheet.Api.Application.Services;
 using Cricsheet.Api.Contracts;
 using Cricsheet.Api.Validation;
@@ -20,6 +21,7 @@ internal static class DetailEndpoints
     private static async Task<IResult> GetByIdAsync(
         string matchId,
         [FromServices] IDetailService detailService,
+        [FromServices] IErrorTranslator errorTranslator,
         [FromServices] IValidator<MatchIdRequest> validator,
         HttpContext httpContext,
         CancellationToken cancellationToken)
@@ -44,17 +46,27 @@ internal static class DetailEndpoints
             return Results.BadRequest(validationError);
         }
 
-        var detail = await detailService.GetByIdAsync(matchId, cancellationToken).ConfigureAwait(false);
-        if (detail is null)
+        try
         {
-            var notFoundError = ApiErrors.Create(
-                httpContext,
-                "NOT_FOUND",
-                "Match not found.");
+            var detail = await detailService.GetByIdAsync(matchId, cancellationToken).ConfigureAwait(false);
+            if (detail is null)
+            {
+                var notFoundError = ApiErrors.Create(
+                    httpContext,
+                    "NOT_FOUND",
+                    "Match not found.");
 
-            return Results.NotFound(notFoundError);
+                return Results.NotFound(notFoundError);
+            }
+
+            return Results.Ok(detail);
         }
-
-        return Results.Ok(detail);
+#pragma warning disable CA1031
+        catch (Exception exception)
+#pragma warning restore CA1031
+        {
+            var (statusCode, error) = errorTranslator.Translate(exception, httpContext.GetCorrelationId());
+            return Results.Json(error, statusCode: statusCode);
+        }
     }
 }

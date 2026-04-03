@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IqlQxhpzosk=",
+  "dgSpecHash": "wga2VBlSBhE=",
   "success": true,
-  "projectFilePath": "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.ContractTests\\Cricsheet.Api.ContractTests.csproj",
+  "projectFilePath": "d:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.ContractTests\\Cricsheet.Api.ContractTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dabak\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\dabak\\.nuget\\packages\\coverlet.collector\\6.0.4\\coverlet.collector.6.0.4.nupkg.sha512",

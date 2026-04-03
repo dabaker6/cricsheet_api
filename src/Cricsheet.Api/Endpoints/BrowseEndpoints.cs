@@ -27,6 +27,7 @@ internal static class BrowseEndpoints
         string? eventName,
         string? team,
         [FromServices] IBrowseService browseService,
+        [FromServices] IErrorTranslator errorTranslator,
         [FromServices] IValidator<BrowseFilterRequest> validator,
         HttpContext httpContext,
         CancellationToken cancellationToken)
@@ -52,7 +53,17 @@ internal static class BrowseEndpoints
         }
 
         var filter = new BrowseFilter(gender, fromDate, toDate, venue, matchType, eventName, team);
-        var browseResult = await browseService.BrowseAsync(filter, cancellationToken).ConfigureAwait(false);
-        return Results.Ok(browseResult);
+        try
+        {
+            var browseResult = await browseService.BrowseAsync(filter, cancellationToken).ConfigureAwait(false);
+            return Results.Ok(browseResult);
+        }
+#pragma warning disable CA1031
+        catch (Exception exception)
+#pragma warning restore CA1031
+        {
+            var (statusCode, error) = errorTranslator.Translate(exception, httpContext.GetCorrelationId());
+            return Results.Json(error, statusCode: statusCode);
+        }
     }
 }

@@ -41,7 +41,7 @@
 - [x] T022 [US3] Write integration tests for 400/404/503 error contracts in `tests/Cricsheet.Api.IntegrationTests/ErrorResponseTests.cs`.
 - [x] T023 [US3] Write contract tests for `ApiError` schema in `tests/Cricsheet.Api.ContractTests/ErrorContractTests.cs`.
 - [x] T024 [US3] Implement exception-to-error translation and status mapping in `src/Cricsheet.Api/Application/Services/ErrorTranslator.cs`.
-- [ ] T025 [US3] Ensure endpoints return structured frontend-consumable errors.
+- [x] T025 [US3] Ensure endpoints return structured frontend-consumable errors.
 
 ## Phase 6: Security, Cloud, and Polish
 
