@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kouZXvo5nW0=",
+  "dgSpecHash": "IAq/RZAEJ8Y=",
   "success": true,
-  "projectFilePath": "d:\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj",
+  "projectFilePath": "C:\\Users\\dabak\\source\\repos\\cricsheet_api\\src\\Cricsheet.Api\\Cricsheet.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dabak\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
     "C:\\Users\\dabak\\.nuget\\packages\\azure.identity\\1.13.2\\azure.identity.1.13.2.nupkg.sha512",

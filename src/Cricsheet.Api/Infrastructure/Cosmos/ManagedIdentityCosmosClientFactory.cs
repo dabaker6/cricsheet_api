@@ -36,6 +36,11 @@ internal sealed class ManagedIdentityCosmosClientFactory : ICosmosClientFactory,
 
     private CosmosClient CreateClientInternal()
     {
+        if (!string.IsNullOrWhiteSpace(_settings.AccountKey))
+        {
+            return new CosmosClient(_settings.AccountEndpoint, _settings.AccountKey);
+        }
+
         var tokenCredential = BuildTokenCredential(_settings.ManagedIdentityClientId);
         var cosmosClientOptions = new CosmosClientOptions();
 

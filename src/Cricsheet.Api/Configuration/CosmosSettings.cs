@@ -12,6 +12,8 @@ internal sealed class CosmosSettings
     [Url]
     public string AccountEndpoint { get; init; } = string.Empty;
 
+    public string? AccountKey { get; init; }
+
     [Required]
     public string DatabaseName { get; init; } = string.Empty;
 

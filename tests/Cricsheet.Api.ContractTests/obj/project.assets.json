@@ -2844,11 +2844,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.ContractTests\\Cricsheet.Api.ContractTests.csproj",
+      "projectUniqueName": "C:\\Users\\dabak\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.ContractTests\\Cricsheet.Api.ContractTests.csproj",
       "projectName": "Cricsheet.Api.ContractTests",
-      "projectPath": "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.ContractTests\\Cricsheet.Api.ContractTests.csproj",
+      "projectPath": "C:\\Users\\dabak\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.ContractTests\\Cricsheet.Api.ContractTests.csproj",
       "packagesPath": "C:\\Users\\dabak\\.nuget\\packages\\",
-      "outputPath": "D:\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.ContractTests\\obj\\",
+      "outputPath": "C:\\Users\\dabak\\source\\repos\\cricsheet_api\\tests\\Cricsheet.Api.ContractTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2867,6 +2867,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "projectReferences": {}
         }
@@ -2885,6 +2886,7 @@
     },
     "frameworks": {
       "net10.0": {
+        "framework": "net10.0",
         "targetAlias": "net10.0",
         "dependencies": {
           "FluentAssertions": {
