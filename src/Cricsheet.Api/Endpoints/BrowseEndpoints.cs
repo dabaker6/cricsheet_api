@@ -4,6 +4,7 @@ using Cricsheet.Api.Contracts;
 using Cricsheet.Api.Validation;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace Cricsheet.Api.Endpoints;
 
@@ -29,6 +30,7 @@ internal static class BrowseEndpoints
         [FromServices] IBrowseService browseService,
         [FromServices] IErrorTranslator errorTranslator,
         [FromServices] IValidator<BrowseFilterRequest> validator,
+        [FromServices] ILoggerFactory loggerFactory,
         HttpContext httpContext,
         CancellationToken cancellationToken)
     {
@@ -62,6 +64,12 @@ internal static class BrowseEndpoints
         catch (Exception exception)
 #pragma warning restore CA1031
         {
+            var logger = loggerFactory.CreateLogger("BrowseEndpoints");
+            logger.LogError(
+                exception,
+                "Browse request failed. CorrelationId: {CorrelationId}",
+                httpContext.GetCorrelationId());
+
             var (statusCode, error) = errorTranslator.Translate(exception, httpContext.GetCorrelationId());
             return Results.Json(error, statusCode: statusCode);
         }
