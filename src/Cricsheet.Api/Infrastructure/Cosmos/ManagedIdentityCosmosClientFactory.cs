@@ -8,17 +8,17 @@ namespace Cricsheet.Api.Infrastructure.Cosmos;
 internal sealed class ManagedIdentityCosmosClientFactory : ICosmosClientFactory, IDisposable
 {
     private readonly CosmosSettings _settings;
-    private readonly Lazy<CosmosClient> _cosmosClient;
+    private readonly CosmosClient _cosmosClient;
 
     public ManagedIdentityCosmosClientFactory(IOptions<CosmosSettings> settings)
     {
         _settings = settings.Value;
-        _cosmosClient = new Lazy<CosmosClient>(CreateClientInternal, LazyThreadSafetyMode.ExecutionAndPublication);
+        _cosmosClient = CreateClientInternal();
     }
 
     public CosmosClient GetClient()
     {
-        return _cosmosClient.Value;
+        return _cosmosClient;
     }
 
     public Container GetContainer()
@@ -28,10 +28,7 @@ internal sealed class ManagedIdentityCosmosClientFactory : ICosmosClientFactory,
 
     public void Dispose()
     {
-        if (_cosmosClient.IsValueCreated)
-        {
-            _cosmosClient.Value.Dispose();
-        }
+        _cosmosClient.Dispose();
     }
 
     private CosmosClient CreateClientInternal()
