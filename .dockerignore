@@ -1,0 +1,8 @@
+**/bin/
+**/obj/
+**/*.Tests/
+tests/
+.git
+.gitignore
+Dockerfile
+README.md
