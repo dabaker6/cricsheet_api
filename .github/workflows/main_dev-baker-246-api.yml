@@ -36,6 +36,12 @@ jobs:
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A93B16FA6F1048DB90DD6CED2B84B175 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E51090B53AE94C9997E5FBE88B4764A4 }}
       
+      - name: Build and push image
+        run: |
+          IMAGE="$ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG"
+          docker build -t $IMAGE .
+          docker push $IMAGE     
+      
       - name: Deploy Web App container
         run: |
           IMAGE="$ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG"
