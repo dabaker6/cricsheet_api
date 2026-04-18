@@ -7,7 +7,6 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 permissions:
       id-token: write 
@@ -35,7 +34,11 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID_GITHUB_OIDC_DEPLOY }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A93B16FA6F1048DB90DD6CED2B84B175 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E51090B53AE94C9997E5FBE88B4764A4 }}
-      
+       
+      - name: ACR Login
+        run: |
+          az acr login --name $ACR_NAME
+                
       - name: Build and push image
         run: |
           IMAGE="$ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG"
