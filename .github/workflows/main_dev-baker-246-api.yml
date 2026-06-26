@@ -22,7 +22,7 @@ jobs:
       IMAGE_TAG: v1.${{ github.sha }}
       WEBAPP_NAME: ${{ secrets.CRICSHEET_API_NAME }}
       RESOURCE_GROUP: ${{ secrets.PERSONAL_WEBSITE_RG }}
-      IMAGE: "${{ secrets.CRICSHEET_API_IMAGE_NAMEE }}:v1.${{ github.sha }}"    
+      IMAGE: "${{ secrets.CRICSHEET_API_IMAGE_NAME }}:v1.${{ github.sha }}"    
       
     steps:
       - name: Checkout repo
