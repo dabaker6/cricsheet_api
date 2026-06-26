@@ -12,18 +12,18 @@ permissions:
       id-token: write 
       contents: read #This is required for actions/checkout
 
-env:
-  ACR_NAME: ${{secrets.PERSONAL_WEBSITE_ACR_NAME}}
-  IMAGE_NAME: ${{secrets.CRICSHEET_API_IMAGE_NAME}}
-  IMAGE_TAG: v1.${{ github.sha }}
-  WEBAPP_NAME: ${{secrets.CRICSHEET_API_NAME}}
-  RESOURCE_GROUP: ${{secrets.PERSONAL_WEBSITE_RG}}
-
-
 jobs:
   build:
     runs-on: ubuntu-latest
     
+    env:
+      ACR_NAME: ${{ secrets.PERSONAL_WEBSITE_ACR_NAME }}
+      IMAGE_NAME: ${{ secrets.CRICSHEET_API_IMAGE_NAME }}
+      IMAGE_TAG: v1.${{ github.sha }}
+      WEBAPP_NAME: ${{ secrets.CRICSHEET_API_NAME }}
+      RESOURCE_GROUP: ${{ secrets.PERSONAL_WEBSITE_RG }}
+      IMAGE: "${{ secrets.CRICSHEET_API_IMAGE_NAMEE }}:v1.${{ github.sha }}"    
+      
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4  
@@ -31,19 +31,16 @@ jobs:
       - name: Azure Login
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID_GITHUB_OIDC_DEPLOY }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_A93B16FA6F1048DB90DD6CED2B84B175 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_E51090B53AE94C9997E5FBE88B4764A4 }}
-       
-      - name: ACR Login
-        run: |
-          az acr login --name $ACR_NAME
+          client-id: ${{ secrets.AZURE_GITHUB_OIDC }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
                 
       - name: Build and push image
         run: |
-          IMAGE="$ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG"
+          az acr login --name $ACR_NAME
+          IMAGE="$ACR_NAME.azurecr.io/$IMAGE"
           docker build -t $IMAGE .
-          docker push $IMAGE     
+          docker push $IMAGE    
       
       - name: Deploy Web App container
         run: |
@@ -59,5 +56,3 @@ jobs:
           az webapp restart \
             --name $WEBAPP_NAME \
             --resource-group $RESOURCE_GROUP
-          
-          
