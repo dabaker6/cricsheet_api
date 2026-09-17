@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - app-dev-baker-246-api
+name: cricksheet_api - Built and deploy to Azure webapp container 
 
 on:
   push:
@@ -63,7 +63,7 @@ jobs:
           az webapp config container set \
             --name ${{ secrets.CRICSHEET_API_NAME }} \
             --resource-group ${{ secrets.PERSONAL_WEBSITE_RG }} \
-            --docker-custom-image-name "${{ steps.img.outputs.ref }}"
+            --container-image-name "${{ steps.img.outputs.ref }}"
 
       - name: Restart Web App
         run: |
