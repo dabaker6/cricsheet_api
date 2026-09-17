@@ -21,15 +21,6 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    
-    env:
-      ACR_NAME: ${{ secrets.PERSONAL_WEBSITE_ACR_NAME }}
-      IMAGE_NAME: ${{ secrets.CRICSHEET_API_IMAGE_NAME }}
-      IMAGE_TAG: v1.${{ github.sha }}
-      WEBAPP_NAME: ${{ secrets.CRICSHEET_API_NAME }}
-      RESOURCE_GROUP: ${{ secrets.PERSONAL_WEBSITE_RG }}
-      IMAGE: "${{ secrets.CRICSHEET_API_IMAGE_NAME }}:v1.${{ github.sha }}"    
-      
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4  
@@ -66,25 +57,16 @@ jobs:
           client-id: ${{ secrets.AZURE_GITHUB_OIDC }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-                
-      - name: Build and push image
-        run: |
-          az acr login --name $ACR_NAME
-          IMAGE="$ACR_NAME.azurecr.io/$IMAGE"
-          docker build -t $IMAGE .
-          docker push $IMAGE    
       
       - name: Deploy Web App container
         run: |
-          IMAGE="$ACR_NAME.azurecr.io/$IMAGE_NAME:$IMAGE_TAG"
-
           az webapp config container set \
-            --name $WEBAPP_NAME \
-            --resource-group $RESOURCE_GROUP \
+            --name secrets.CRICSHEET_API_NAME \
+            --resource-group secrets.PERSONAL_WEBSITE_RG \
             --docker-custom-image-name $IMAGE
 
       - name: Restart Web App
         run: |
           az webapp restart \
-            --name $WEBAPP_NAME \
-            --resource-group $RESOURCE_GROUP
+            --name secrets.CRICSHEET_API_NAME \
+            --resource-group secrets.PERSONAL_WEBSITE_RG
