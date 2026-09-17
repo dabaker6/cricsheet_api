@@ -63,7 +63,7 @@ jobs:
           az webapp config container set \
             --name ${{ secrets.CRICSHEET_API_NAME }} \
             --resource-group ${{ secrets.PERSONAL_WEBSITE_RG }} \
-            --docker-custom-image-name $IMAGE
+            --docker-custom-image-name "${{ steps.img.outputs.ref }}"
 
       - name: Restart Web App
         run: |
