@@ -16,6 +16,8 @@ env:
   IMAGE_NAME: ${{ github.repository }}
   IMAGE_TAG: v1.${{ github.sha }}
   DOTNET_VERSION: '10.0.x'
+  CRICSHEET_API_NAME: ${{ secrets.CRICSHEET_API_NAME }}
+  WEBAPP_RESOURCEGROUP: ${{ secrets.PERSONAL_WEBSITE_RG }}   
 
 jobs:
   build-and-test:
@@ -96,12 +98,12 @@ jobs:
       - name: Deploy Web App container
         run: |
           az webapp config container set \
-            --name ${{ secrets.CRICSHEET_API_NAME }} \
-            --resource-group ${{ secrets.PERSONAL_WEBSITE_RG }} \
+            --name $CRICSHEET_API_NAME \
+            --resource-group $WEBAPP_RESOURCEGROUP \
             --container-image-name "${{ steps.img.outputs.ref }}"
 
       - name: Restart Web App
         run: |
           az webapp restart \
-            --name ${{ secrets.CRICSHEET_API_NAME }} \
-            --resource-group ${{ secrets.PERSONAL_WEBSITE_RG }}
+            --name $CRICSHEET_API_NAME \
+            --resource-group $WEBAPP_RESOURCEGROUP
