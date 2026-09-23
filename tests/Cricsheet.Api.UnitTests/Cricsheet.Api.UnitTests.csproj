@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Cricsheet.Api\Cricsheet.Api.csproj" />
+    <ProjectReference Include="..\..\src\cricsheet.api\cricsheet.api.csproj" />
     <ProjectReference Include="..\Cricsheet.Api.IntegrationTests\Cricsheet.Api.IntegrationTests.csproj" />
   </ItemGroup>
 
