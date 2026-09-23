@@ -4,7 +4,7 @@
     <File Path="Dockerfile" />
   </Folder>
   <Folder Name="/src/">
-    <Project Path="src/Cricsheet.Api/Cricsheet.Api.csproj" />
+    <Project Path="src/cricsheet.Api/cricsheet.api.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/Cricsheet.Api.ContractTests/Cricsheet.Api.ContractTests.csproj" />
