@@ -1,0 +1,28 @@
+# .github/dependabot.yml
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "ci"
+    groups:
+      actions:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
+        
+  - package-ecosystem: nuget
+    directory: /src/cricsheet.api
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: "deps"
+    groups:
+      dotnet-minor-patch:
+        patterns: ["*"]
+        update-types: ["minor", "patch"]
