@@ -17,14 +17,33 @@ env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
   IMAGE_TAG: v1.${{ github.sha }}
+  DOTNET_VERSION: '10.0.x'
 
 jobs:
-  build:
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4  
+        uses: actions/checkout@v4
 
+      - name: Setup dotnet ${{ env.DOTNET_VERSION }} environment
+        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.2.0
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+          cache: true
+      
+      - name: Install dependencies
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      - name: Run tests
+        run: dotnet test --no-restore      
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
       - name: Construct image reference
         id: img
         run: echo "ref=${REGISTRY}/${IMAGE_NAME@L}:${IMAGE_TAG}" >> "$GITHUB_OUTPUT"
