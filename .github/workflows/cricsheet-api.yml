@@ -115,3 +115,16 @@ jobs:
           az webapp restart \
             --name $CRICSHEET_API_NAME \
             --resource-group $WEBAPP_RESOURCEGROUP
+            
+      - name: Smoke Test
+        run: |
+          configured_image=$(az webapp config show \
+            --name $CRICSHEET_API_NAME \
+            --resource-group $WEBAPP_RESOURCGROUP
+            --query LinuxFxVersion -o tsv
+          echo "configured image: $configured_image"
+          case "$configured_image" in
+            *"${{ github.sha }}"*) echo "Image matches commit" ;;
+            *) echo "::error:: App uses $configured_image, expected ${{ github.sha }}"; exit 1 ;;
+            esac
+          

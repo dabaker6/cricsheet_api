@@ -21,6 +21,7 @@ RUN dotnet publish src/cricsheet.api/cricsheet.api.csproj -c Release -o /app/pub
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
-
+ARG GIT_SHA=unknown
+ENV GIT_SHA=$GIT_SHA
 ENV ASPNETCORE_URLS=http://+:8080
 ENTRYPOINT ["dotnet", "cricsheet.api.dll"]

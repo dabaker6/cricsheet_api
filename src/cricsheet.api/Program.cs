@@ -12,6 +12,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Serilog;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -91,6 +92,8 @@ app.MapHealthChecks("/health/ready", new HealthCheckOptions
 	Predicate = registration => registration.Tags.Contains("ready"),
 	ResponseWriter = WriteHealthResponseAsync
 });
+app.MapGet("/version", () => new { sha = Environment.GetEnvironmentVariable("GIT_SHA") });
+    
 app.MapBrowseEndpoints();
 app.MapDetailEndpoints();
 
