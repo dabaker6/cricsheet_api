@@ -121,7 +121,7 @@ jobs:
           configured_image=$(az webapp config show \
             --name $CRICSHEET_API_NAME \
             --resource-group $WEBAPP_RESOURCEGROUP \
-            --query LinuxFxVersion -o tsv
+            --query LinuxFxVersion -o tsv)
           echo "configured image: $configured_image"
           case "$configured_image" in
             *"${{ github.sha }}"*) echo "Image matches commit" ;;
