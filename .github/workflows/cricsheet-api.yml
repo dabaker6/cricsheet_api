@@ -116,7 +116,7 @@ jobs:
             --name $CRICSHEET_API_NAME \
             --resource-group $WEBAPP_RESOURCEGROUP
             
-      - name: Smoke Test
+      - name: Ensure correct image loaded
         run: |
           configured_image=$(az webapp config show \
             --name $CRICSHEET_API_NAME \
