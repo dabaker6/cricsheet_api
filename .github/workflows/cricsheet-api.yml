@@ -120,7 +120,7 @@ jobs:
         run: |
           configured_image=$(az webapp config show \
             --name $CRICSHEET_API_NAME \
-            --resource-group $WEBAPP_RESOURCGROUP
+            --resource-group $WEBAPP_RESOURCEGROUP \
             --query LinuxFxVersion -o tsv
           echo "configured image: $configured_image"
           case "$configured_image" in
