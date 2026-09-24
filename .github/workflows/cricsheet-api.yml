@@ -127,4 +127,20 @@ jobs:
             *"${{ github.sha }}"*) echo "Image matches commit" ;;
             *) echo "::error:: App uses $configured_image, expected ${{ github.sha }}"; exit 1 ;;
             esac
-          
+
+      - name: Smoke test via website
+        env:
+          CHECK_URL: https://david-baker.co.uk/matches?matchType=male
+        run: |
+          for i in {1..10}; do
+            body=$(curl -s --max-time 20 "$CHECK_URL" || true)
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-time 20 "$CHECK_URL" || true)            
+            if [ "$code" = "200" ] && ! echo "$body" | grep -q "Unable to load matches" ; then
+              echo "API answered through the site after $i attempt(s)"
+              exit 0
+            fi
+            echo "attempt $i: HTTP $code, no response from API, attempting again..."
+            sleep 10
+          done
+          echo "::error::Site could not reach the API after deploy"
+          exit 1
