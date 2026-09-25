@@ -133,7 +133,15 @@ jobs:
           client-id: ${{ secrets.AZURE_GITHUB_OIDC }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-      
+          
+      - name: Get current image
+        id: webapp_img
+        run: |
+          current_image=$(az webapp config container show --name "$WEBAPP_NAME" --resource-group "$WEBAPP_RESOURCEGROUP" \
+            --query "[?name=='DOCKER_CUSTOM_IMAGE_NAME'].value | [0]" -o tsv | cut -d'|' -f2)          
+          echo "previous_image=${current_image}" >> "$GITHUB_OUTPUT"
+          echo "Current image running: ${current_image}"
+                
       - name: Point Web App at the GHCR image
         env:
           DIGEST: ${{ needs.build-and-push.outputs.digest }} 
@@ -168,6 +176,7 @@ jobs:
           esac
           
       - name: Smoke test via website
+        id: smoke
         env:
           CHECK_URL: https://david-baker.co.uk/matches?matchType=male
         run: |
@@ -182,4 +191,20 @@ jobs:
             sleep 10
           done
           echo "::error::Site could not reach the API after deploy"
+          exit 1
+          
+      - name: Roll back
+        id: rollback
+        if: failure() && steps.smoke.outcome == 'failure' && steps.webapp_img.outputs.previous_image != '' 
+        env:
+          PREVIOUS_IMAGE: "${{ steps.webapp_img.outputs.previous_image }}"        
+        run: |
+          echo "::warning::Smoke test failed, reverting to ${PREVIOUS_IMAGE}"
+          az webapp config container set \
+            --name "$WEBAPP_NAME" \
+            --resource-group "$WEBAPP_RESOURCEGROUP" \
+            --container-image-name "$PREVIOUS_IMAGE"
+          az webapp restart \
+            --name "$WEBAPP_NAME" \
+            --resource-group "$WEBAPP_RESOURCEGROUP"  
           exit 1
