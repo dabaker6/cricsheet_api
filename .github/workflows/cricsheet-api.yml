@@ -189,8 +189,8 @@ jobs:
       - name: Restart Web App
         run: |
           az webapp restart \
-            --name $WEBAPP_NAME \
-            --resource-group $WEBAPP_RESOURCEGROUP
+            --name "$WEBAPP_NAME" \
+            --resource-group "$WEBAPP_RESOURCEGROUP"
             
       - name: Ensure correct image loaded
         id: verify
