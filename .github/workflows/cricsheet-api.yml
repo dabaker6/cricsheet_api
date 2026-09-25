@@ -92,6 +92,7 @@ jobs:
           cache-to: type=gha,mode=max
 
       - name: Scan image
+        id: scan
         uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
           image-ref: ${{ steps.img.outputs.ref }}
@@ -114,7 +115,25 @@ jobs:
           : "${digest:?could not resolve digest after push}"
           echo "digest=$digest" >> "$GITHUB_OUTPUT"
           echo "Pushed ${name}@${digest}"
-          
+
+      - name: Build summary
+        if: always()
+        env:
+          DIGEST: ${{ steps.push.outputs.digest }}
+        run: |
+          {
+            echo "### Build"
+            echo ""
+            echo "| | |"
+            echo "|---|---|"
+            echo "| Trigger | ${{ github.event_name }} |"
+            echo "| Commit | \`${GITHUB_SHA}\` |"
+            echo "| Tag | \`${IMAGE_TAG}\` |"
+            echo "| Scan | ${{ steps.scan.outcome }} |"
+            echo "| Push | ${{ steps.push.outcome }} |"
+            echo "| Digest | \`${DIGEST:-none}\` |"
+          } >> "$GITHUB_STEP_SUMMARY"
+                 
   deploy:
     needs: build-and-push
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
@@ -208,3 +227,22 @@ jobs:
             --name "$WEBAPP_NAME" \
             --resource-group "$WEBAPP_RESOURCEGROUP"  
           exit 1
+          
+      - name: Deploy Summary
+        if: always()
+        env:
+          DIGEST: ${{ needs.build-and-push.outputs.digest }}
+          PREVIOUS_IMAGE: ${{ steps.webapp_img.outputs.previous_image }}
+        run: |
+          {
+            echo "### Deploy"
+            echo ""
+            echo "| | |"
+            echo "|---|---|"
+            echo "| App | \`${WEBAPP_NAME}\` |"
+            echo "| Deployed |  \`${REGISTRY}/${IMAGE_NAME@L}@${DIGEST}\` |"
+            echo "| Previous | \`${PREVIOUS_IMAGE:-none}\` |"
+            echo "| Verify | ${{ steps.verify.outcome }} |"
+            echo "| Smoke | ${{ steps.smoke.outcome }} |"
+            echo "| Roll back | ${{ steps.rollback.outcome }} |"
+          } >> "$GITHUB_STEP_SUMMARY"  
